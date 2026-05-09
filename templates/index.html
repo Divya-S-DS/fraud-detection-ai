@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Fraud Detection AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Credit Card Fraud Detection</h1>
+
+    <form id="fraudForm">
+
+        <input type="number"
+               name="amount"
+               placeholder="Transaction Amount"
+               required>
+
+        <select name="night">
+
+            <option value="0">
+                Day Transaction
+            </option>
+
+            <option value="1">
+                Night Transaction
+            </option>
+
+        </select>
+
+        <input type="number"
+               name="distance"
+               placeholder="Distance From Home">
+
+        <select name="unknown_device">
+
+            <option value="0">
+                Known Device
+            </option>
+
+            <option value="1">
+                Unknown Device
+            </option>
+
+        </select>
+
+        <select name="new_merchant">
+
+            <option value="0">
+                Known Merchant
+            </option>
+
+            <option value="1">
+                New Merchant
+            </option>
+
+        </select>
+
+        <select name="foreign">
+
+            <option value="0">
+                Domestic Transaction
+            </option>
+
+            <option value="1">
+                Foreign Transaction
+            </option>
+
+        </select>
+
+        <button type="submit">
+            Check Fraud
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
